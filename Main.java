@@ -19,6 +19,7 @@ public class Main {
             case FRIDAY -> System.out.println("Friday");
             case SATURDAY -> System.out.println("Saturday");
             case SUNDAY -> System.out.println("Sunday");
+            default -> System.out.println("Invalid day");
         }
         System.out.println("done");
     }
