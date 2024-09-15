@@ -5,21 +5,18 @@ public class Main {
      * @param args
      */
     public static void main(String[] args) {
-        byte day = 3;
+        byte day = 2;
         System.out.println(day);
         printDayOfWeek(day);
     }
 
     public static void printDayOfWeek(int day) {
         switch(day) {
-            case 1 -> System.out.println("Monday");
-            case 2 -> System.out.println("Tuesday");
-            case 3 -> System.out.println("Wednesday");
-            case 4 -> System.out.println("Thursday");
-            case 5 -> System.out.println("Friday");
-            case 6 -> System.out.println("Saturday");
+            case 1, 2, 3 -> System.out.println("Range between -> Monday - Tuesday - Wednesday");
+            case 4, 5, 6 -> System.out.println("Range between -> Thursday - Friday - Saturday");
             case 7 -> System.out.println("Sunday");
-            default -> System.out.println("Invalid day");
-        };
+            default -> System.out.println("Invalid day range");
+        }
+        System.out.println("Done");
     }
 }
