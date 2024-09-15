@@ -19,9 +19,10 @@ public class Main {
             case FRIDAY -> "Friday";
             case SATURDAY -> "Saturday";
             case SUNDAY -> "Sunday";
+            default -> "Invalid day";
         };
         return result;
     }
 
-    enum DayOfWeek { MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY }
+    enum DayOfWeek { MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY, AAAZZZ }
 }
