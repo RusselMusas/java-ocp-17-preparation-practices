@@ -5,9 +5,8 @@ public class Main {
      * @param args
      */
     public static void main(String[] args) {
-        /** Loops - for loop print -> in reverse order */
-        for(int count = 10; count >= 0; count--) {
-            System.out.println("Count value is: " + count);
-        }
+        /** Loops - for loop print -> infinite loop */
+        for(;;) 
+            System.out.println("Hello World");
     }
 }
