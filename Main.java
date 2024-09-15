@@ -7,21 +7,20 @@ public class Main {
     public static void main(String[] args) {
         byte day = 3;
         System.out.println(day);
-        System.out.println(printDayOfWeek(DayOfWeek.MONDAY));
+        printDayOfWeek(DayOfWeek.AAAZZZ);
     }
 
-    public static String printDayOfWeek(DayOfWeek day) {
-        String result = switch(day) {
-            case MONDAY -> "Monday";
-            case TUESDAY -> "Tuesday";
-            case WEDNESDAY -> "Wednesday";
-            case THURSDAY -> "Thursday";
-            case FRIDAY -> "Friday";
-            case SATURDAY -> "Saturday";
-            case SUNDAY -> "Sunday";
-            default -> "Invalid day";
-        };
-        return result;
+    public static void printDayOfWeek(DayOfWeek day) {
+        switch(day) {
+            case MONDAY -> System.out.println("Monday");
+            case TUESDAY -> System.out.println("Tuesday");
+            case WEDNESDAY -> System.out.println("Wednesday");
+            case THURSDAY -> System.out.println("Thursday");
+            case FRIDAY -> System.out.println("Friday");
+            case SATURDAY -> System.out.println("Saturday");
+            case SUNDAY -> System.out.println("Sunday");
+        }
+        System.out.println("done");
     }
 
     enum DayOfWeek { MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY, AAAZZZ }
