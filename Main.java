@@ -5,24 +5,28 @@ public class Main {
      * @param args
      */
     public static void main(String[] args) {
-        byte day = 3;
-        System.out.println(day);
-        printDayOfWeek(DayOfWeek.AAAZZZ);
+        byte age = 2;
+        System.out.println(age);
+        System.out.println(printDayOfWeek(age));
     }
 
-    public static void printDayOfWeek(DayOfWeek day) {
-        switch(day) {
-            case MONDAY -> System.out.println("Monday");
-            case TUESDAY -> System.out.println("Tuesday");
-            case WEDNESDAY -> System.out.println("Wednesday");
-            case THURSDAY -> System.out.println("Thursday");
-            case FRIDAY -> System.out.println("Friday");
-            case SATURDAY -> System.out.println("Saturday");
-            case SUNDAY -> System.out.println("Sunday");
-            default -> System.out.println("Invalid day");
-        }
-        System.out.println("done");
+    public static String printDayOfWeek(int age) {
+        String result = switch(age) {
+            case 0, 1, 2, 3 -> {
+                if(age == 0) {
+                    yield "Baby Lavel 1";
+                } else if(age == 1) {
+                    yield "Baby Lavel 2";
+                } else if(age == 2) {
+                    yield "Baby Lavel 3";
+                } else {
+                    yield "Baby Level 3";
+                }
+            }
+            case 4, 5, 6 -> {yield "Child";}
+            case 7, 8, 9, 10, 11, 12 -> "young";
+            default -> "Invalid age";
+        };
+        return result;
     }
-
-    enum DayOfWeek { MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY, AAAZZZ }
 }
