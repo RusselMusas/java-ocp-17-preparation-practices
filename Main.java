@@ -15,9 +15,15 @@ public class Main {
         main.printNames(names);
 
         System.out.println("=========================");
-        
+
         List<String> namesList = List.of("Micha", "Owen", "Princilia", "Prunelle");
         main.printNames(namesList);
+
+        System.out.println("=========================");
+
+        String courseName = "Java OCP";
+        main.printCharacters(courseName);
+
     }
 
     public void printNames(String[] names) {
@@ -28,5 +34,10 @@ public class Main {
     public void printNames(List<String> names) {
         for (var name : names) 
             System.out.println(name);
+    }
+
+    public void printCharacters(String name) {
+        for (var character : name.toCharArray()) 
+            System.out.print(character + " ");
     }
 }
