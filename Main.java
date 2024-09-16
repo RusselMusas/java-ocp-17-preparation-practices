@@ -1,3 +1,4 @@
+import java.util.List;
 
 public class Main {
 
@@ -12,10 +13,20 @@ public class Main {
         String[] names = {"John", "Jane", "Joe"};
         Main main = new Main();
         main.printNames(names);
+
+        System.out.println("=========================");
+        
+        List<String> namesList = List.of("Micha", "Owen", "Princilia", "Prunelle");
+        main.printNames(namesList);
     }
 
     public void printNames(String[] names) {
-        for (String name : names) 
+        for (var name : names) 
+            System.out.println(name);
+    }
+
+    public void printNames(List<String> names) {
+        for (var name : names) 
             System.out.println(name);
     }
 }
