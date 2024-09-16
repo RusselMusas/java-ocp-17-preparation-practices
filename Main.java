@@ -6,38 +6,27 @@ public class Main {
      * @param args
      */
     public static void main(String[] args) {
-        /** Loops - for-each loop */
-        /** Can be used with: 
-         *      Built-in java array
-         *      Object whose type implements java.lang.iterable (collection) */
-        String[] names = {"John", "Jane", "Joe"};
-        Main main = new Main();
-        main.printNames(names);
-
+        /** Loops - Nested Loops */
+        int[][] matrix = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+        printMatrix(matrix);
         System.out.println("=========================");
-
-        List<String> namesList = List.of("Micha", "Owen", "Princilia", "Prunelle");
-        main.printNames(namesList);
-
-        System.out.println("=========================");
-
-        String courseName = "Java OCP";
-        main.printCharacters(courseName);
-
+        printMatrixWithForEachLoop(matrix);
     }
 
-    public void printNames(String[] names) {
-        for (var name : names) 
-            System.out.println(name);
+    public static void printMatrix(int[][] matrix) {
+        for(int i = 0; i < matrix.length; i++) {
+            for(int j = 0; j < matrix[i].length; j++)
+                System.out.print(matrix[i][j] + " ");
+            System.out.println();
+        }
     }
 
-    public void printNames(List<String> names) {
-        for (var name : names) 
-            System.out.println(name);
+    public static void printMatrixWithForEachLoop(int[][] matrix) {
+        for(int[] row : matrix) {
+            for(int col : row)
+                System.out.print(col + " ");
+            System.out.println();
+        }
     }
 
-    public void printCharacters(String name) {
-        for (var character : name.toCharArray()) 
-            System.out.print(character + " ");
-    }
 }
