@@ -16,6 +16,9 @@ public class Main {
         System.out.println("6" + 5);
         System.out.println(a + 6);
         System.out.println(a + "6");
+        System.out.println("""
+                           Marlene
+                           """ + name);
     }
 
 }
