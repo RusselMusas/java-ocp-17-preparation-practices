@@ -22,6 +22,8 @@ public class Main {
         System.out.println(a + 2 + 6 + "6"); // 136
         System.out.println("6" + a + 2 + 6); // 6526
         System.out.println("6" + (a + 2 + 6)); // 613
+        System.out.println("null" + null);
+        System.out.println("azerty" + null);
     }
 
 }
