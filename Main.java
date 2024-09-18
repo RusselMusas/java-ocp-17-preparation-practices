@@ -42,6 +42,33 @@ public class Main {
         System.out.println(label.substring(1, 1));
         System.out.println(label.substring(2, 3));
         System.out.println(label.substring(label.length()-1, label.length()));
+
+        System.out.println("===========================");
+        /** strip and trim */
+        String text = "\t \n ab c \n\t";
+        System.out.println(text.trim().length());
+        System.out.println(text.strip().length());
+        System.out.println(text.stripLeading().length());
+        System.out.println(text.stripTrailing().length());
+
+        String textBloc = """
+                Monsieur le directeur
+                Je viens par la presente vous notifier que votre compte a ete cree.
+                Cordialement,
+                Russel M.""";
+        System.out.println(textBloc);
+        System.out.println("***************");
+        System.out.println(textBloc.indent(4));
+        System.out.println(textBloc.indent(4).indent(-2));
+
+        var bloc = """
+                a
+                 b
+                c""";
+                    
+        System.out.println(bloc.length());
+        System.out.println(bloc.indent(1));
+        System.out.println(bloc.indent(1).length());
     }
 
     public static void printInt(int input) {
