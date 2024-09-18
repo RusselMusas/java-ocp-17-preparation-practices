@@ -33,6 +33,15 @@ public class Main {
         System.out.println("indexOf ni is: " + label.indexOf("ni", 10));
         System.out.println("indexOf ma is: " + label.indexOf("ma"));
         System.out.println("indexOf ma is: " + label.indexOf("merci"));
+
+        System.out.println("===========================");
+        /** Substring */
+        System.out.println(label.substring(3));
+        System.out.println(label.substring(0, 2));
+        System.out.println(label.substring(label.length()));
+        System.out.println(label.substring(1, 1));
+        System.out.println(label.substring(2, 3));
+        System.out.println(label.substring(label.length()-1, label.length()));
     }
 
     public static void printInt(int input) {
