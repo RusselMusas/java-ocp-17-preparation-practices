@@ -69,6 +69,20 @@ public class Main {
         System.out.println(bloc.length());
         System.out.println(bloc.indent(1));
         System.out.println(bloc.indent(1).length());
+
+        System.out.println("===========================");
+        /** Translate Escape */
+        var translate = "129\\t35";
+        System.out.println(translate);
+        System.out.println(translate.translateEscapes());
+        System.out.println(translate.translateEscapes().concat("\r56").concat("\n40"));
+
+        System.out.println("===========================");
+        /** isEmpty & isBlank */
+        System.out.println(" ".isEmpty());
+        System.out.println("".isEmpty());
+        System.out.println(" ".isBlank());
+        System.out.println("".isBlank());
     }
 
     public static void printInt(int input) {
