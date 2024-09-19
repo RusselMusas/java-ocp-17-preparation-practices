@@ -83,6 +83,28 @@ public class Main {
         System.out.println("".isEmpty());
         System.out.println(" ".isBlank());
         System.out.println("".isBlank());
+
+        System.out.println("===========================");
+        /** Formating values */
+        var customerName = "Micha";
+        var orderId = 541620;
+
+        // Print: Hello Micha, order A541620 is ready.
+        System.out.println("Hello " + customerName + ", order " + orderId + " is ready.");
+        System.out.println(String.format("Hello %s, order %d is ready.", customerName, orderId));
+        System.out.println("Hello %s, order %d is ready.".formatted(customerName, orderId));
+
+        var fullName = "Russel Musasa";
+        var score = 90652.25;
+        var total = 100000;
+        System.out.println("%s:%n   Score: %f out of %d".formatted(fullName, score, total));
+        System.out.println("%s:%n   Score: %.2f out of %d".formatted(fullName, score, total)); // limit decimal digits to 2 (%.2f)
+        System.out.println("My response is %B".formatted(true));
+        System.out.println("My response is %b".formatted(false));
+        System.out.println(String.format("%s:%n   Score: %,.2f out of %d", fullName, score, total));
+        System.out.format("[%12.2f]", 820.12); System.out.println();
+        System.out.format("[%012.2f]", 820.12); System.out.println();
+        System.out.format("[%012.3f]", 820.12);
     }
 
     public static void printInt(int input) {
