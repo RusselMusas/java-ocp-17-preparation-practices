@@ -24,6 +24,27 @@ public class Main {
         System.out.println("a= " + a);
         System.out.println("b= " + b);
         System.out.println("b= " + b);
+
+        StringBuilder d = new StringBuilder(0);
+        d.append(2).append(3);
+        System.out.println("d= " + d);
+
+        System.out.println("==========================");
+        var sb = new StringBuilder("animals");
+        sb.insert(7, "-");                  // sb = animals-
+        sb.insert(0, "-");                  // sb = -animals-
+        sb.insert(4, "-");                  // sb = -ani-mals-
+        System.out.println(sb);
+
+        var builder1 = new StringBuilder("pigeon dirty");
+        builder1.replace(3, 6, "sty");
+        System.out.println(builder1);  // pigsty dirty
+
+        var builder2 = new StringBuilder("pigeon dirty");
+        builder2.replace(3, 100, "");
+        System.out.println(builder2);
+        builder2.reverse();
+        System.out.println("builder2 reversed: " + builder2);
     }
 
 }
