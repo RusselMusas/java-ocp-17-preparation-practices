@@ -45,6 +45,28 @@ public class Main {
         System.out.println(builder2);
         builder2.reverse();
         System.out.println("builder2 reversed: " + builder2);
+
+        System.out.println("==============================");
+        var m = new StringBuilder();
+        var n = new StringBuilder();
+        var o = m.append("a");
+        System.out.println(m == n); // false
+        System.out.println(n == o); // false
+        System.out.println(m == o); // true
+        System.out.println(m.equals(n)); // false
+        System.out.println(m.equals(o)); // true
+        // System.out.println(m == ""); // Do not compile
+
+        var p = "Hello world";
+        var q = getString("Hello world");
+        System.out.println(p == q);
+        var r = "Hello ";
+        r += "world";
+        System.out.println(p == r);
     }
 
+    static String getString(String s) {
+        return new String(s); // create new String object
+        // return new String(s).intern(); // (intern() -> create object in pool if not exist, if object exists in pool, use it
+    }
 }
